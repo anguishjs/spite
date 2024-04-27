@@ -1,6 +1,8 @@
 {
   "name": "@anguish/spite",
-  "version": "0.1.1",
+  "version": "0.1.2",
+  "type": "module",
+  "types": "./src/index.ts",
   "exports": "./src/index.ts",
   "dependencies": {
     "linkedom": "^0.16.11"
