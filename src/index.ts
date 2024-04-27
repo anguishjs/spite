@@ -1,7 +1,17 @@
 import { parseHTML } from "linkedom";
 
-export const render = (html: string, components: Record<string, string>) => {
-  const { document } = parseHTML(html);
+export interface RenderOptions {
+  components: Record<string, string>;
+  layout?: string;
+}
+
+export const render = (html: string, { components, layout }: RenderOptions) => {
+  const { document } = parseHTML(layout ?? html);
+  if (layout != null) {
+    const slot = document.querySelector("slot");
+    if (!slot) throw new Error("layout has no <slot />");
+    slot.outerHTML = html;
+  }
 
   const walkComponent = (el: Element, attrs: NamedNodeMap, props: Set<string>) => {
     let fallthrough = false;
