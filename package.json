@@ -1,5 +1,6 @@
 {
-  "private": true,
+  "name": "@anguish/spite",
+  "version": "0.1.0",
   "dependencies": {
     "linkedom": "^0.16.11"
   },
