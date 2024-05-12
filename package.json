@@ -5,7 +5,9 @@
   "types": "./src/index.ts",
   "exports": "./src/index.ts",
   "dependencies": {
-    "linkedom": "^0.16.11"
+    "@types/uglify-js": "^3.17.5",
+    "linkedom": "^0.16.11",
+    "uglify-js": "^3.17.4"
   },
   "devDependencies": {
     "@types/node": "^20.12.7"
